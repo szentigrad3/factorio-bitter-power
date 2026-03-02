@@ -291,19 +291,6 @@ data:extend{
                         draw_as_shadow = true,
                         scale = 0.5
                     },
-                    {
-                        filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base-mask.png",
-                        flags = { "mask", "low-object" },
-                        line_length = 1,
-                        width = 122,
-                        height = 102,
-                        axially_symmetrical = false,
-                        direction_count = 1,
-                        frame_count = 1,
-                        shift = util.by_pixel(0, -4.5),
-                        tint = {107, 102, 80, 128},
-                        scale = 0.5
-                    }
                 }}
             }
         },
