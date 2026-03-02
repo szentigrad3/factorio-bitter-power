@@ -170,6 +170,7 @@ data:extend({
     next_upgrade = "bp-generator-reinforced",
     fast_replaceable_group = "bp-generators",
     burner = {
+      type = "burner",
       fuel_categories = {"bp-biter-power"},
       effectivity = 1,
       fuel_inventory_size = 1,
