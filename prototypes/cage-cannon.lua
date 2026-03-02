@@ -262,7 +262,8 @@ data:extend{
                     "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-12.png",
                     "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-13.png",
                     "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-14.png",
-                    "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-15.png"
+                    "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-15.png",
+                    "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-16.png"
                 }
             },
         }},
