@@ -409,6 +409,10 @@ if data and data.raw then
                 -- Might cause weird issues on weird icons, 
                 -- but we don't support such biters now.
                 icon.scale = 0.5 -- Not sure yet why 0.5?
+                -- Ensure icon_size is set per-icon, since individual entries in
+                -- an icons array may omit it and rely on the prototype's top-level
+                -- icon_size. Without this, arithmetic on icon_size later would fail.
+                icon.icon_size = icon.icon_size or unit.icon_size
             end
         else
             biter_config.icons = {
