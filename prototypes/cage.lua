@@ -19,6 +19,6 @@ data:extend({
             {type="item", name="copper-cable", amount=20},
         },
         enabled = false,
-        result = "bp-cage"
+        results = {{type="item", name="bp-cage", amount=1}}
     },
 })

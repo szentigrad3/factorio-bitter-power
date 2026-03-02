@@ -146,7 +146,7 @@ data:extend({
       {type="item", name="transport-belt", amount=2},
       {type="item", name="steel-plate", amount=1},
     },
-    result = "bp-generator"
+    results = {{type="item", name="bp-generator", amount=1}}
   },
   {
     name = "bp-generator",

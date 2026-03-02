@@ -78,6 +78,6 @@ data:extend{
       {type="item", name="advanced-circuit", amount=3},
       {type="item", name="steel-plate", amount=2},
     },
-    result = "bp-generator-reinforced"
+    results = {{type="item", name="bp-generator-reinforced", amount=1}}
   },
 }

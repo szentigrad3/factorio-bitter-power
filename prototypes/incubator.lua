@@ -29,7 +29,7 @@ data:extend({
             {type="item", name="copper-plate", amount=4},
         },
         enabled = false,
-        result = "bp-incubator"
+        results = {{type="item", name="bp-incubator", amount=1}}
     },
     {
         type = "assembling-machine",

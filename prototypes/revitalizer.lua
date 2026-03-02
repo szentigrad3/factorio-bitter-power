@@ -171,7 +171,7 @@ data:extend({
             {type="item", name="copper-plate", amount=5},
         },
         enabled = false,
-        result = "bp-revitalizer"
+        results = {{type="item", name="bp-revitalizer", amount=1}}
     },
     {
         type = "furnace",

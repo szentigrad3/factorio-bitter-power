@@ -24,7 +24,7 @@ data:extend({
             {type="item", name="iron-gear-wheel", amount=10},
         },
         enabled = false,
-        result = "bp-egg-extractor"
+        results = {{type="item", name="bp-egg-extractor", amount=1}}
     },
     {
         type = "mining-drill",

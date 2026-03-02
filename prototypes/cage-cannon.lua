@@ -28,7 +28,7 @@ data:extend {
             {type="item", name="iron-gear-wheel", amount=10},
         },
         enabled = false,
-        result = "bp-cage-cannon",
+        results = {{type="item", name="bp-cage-cannon", amount=1}},
     },
     {
         type = "ammo-category",
@@ -43,8 +43,7 @@ data:extend {
           {type="item", name="bp-cage", amount=1},
           {type="item", name="explosives", amount=1},
         },
-        result = "bp-cage-projectile",
-        result_count = 1
+        results = {{type="item", name="bp-cage-projectile", amount=1}}
     },
     {
         -- We need this to only shoot at biters that can be caged.

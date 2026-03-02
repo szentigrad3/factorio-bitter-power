@@ -23,8 +23,7 @@ data:extend{
           {type="item", name="iron-gear-wheel", amount=20},
           {type="item", name="iron-stick", amount=5},
         },
-        result = "bp-cage-trap",
-        result_count = 1
+        results = {{type="item", name="bp-cage-trap", amount=1}}
     },
     {
         type = "land-mine",
