@@ -98,7 +98,7 @@ local function generate_tech_tier(tier)
           -- Scale each icon to the cage icon
           local icon_copy = util.copy(icon)
           icon_copy.scale = icon_copy.scale or 1
-          icon_copy.scale = icon_copy.scale * (64 / icon_copy.icon_size)
+          icon_copy.scale = icon_copy.scale * (64 / (icon_copy.icon_size or 64))
           table.insert(tech.icons, icon_copy)
         end
       end
