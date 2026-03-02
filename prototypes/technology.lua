@@ -18,8 +18,8 @@ local bp_tech = {
       count = 100,
       ingredients =
       {
-        {type="item", name="automation-science-pack", amount=1},
-        {type="item", name="logistic-science-pack", amount=1},
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
       },
       time = 30
     },
@@ -41,8 +41,8 @@ local bp_tech_advanced = {
     count = 100,
     ingredients =
     {
-      {type="item", name="automation-science-pack", amount=1},
-      {type="item", name="logistic-science-pack", amount=1},
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
     },
     time = 30
   },
@@ -81,7 +81,7 @@ local function generate_tech_tier(tier)
     prerequisites = { },
     unit = {
       count = 1,
-      ingredients = { {type="item", name="bp-capture", amount=1}, },
+      ingredients = { {"bp-capture", 1}, },
       time = 1
     },
     order = "b-2-a-"..tier
