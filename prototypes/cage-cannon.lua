@@ -242,6 +242,7 @@ data:extend{
                 line_length = 4,
                 lines_per_file = 4,                
                 draw_as_shadow = true,
+                allow_low_quality_rotation = true,
                 scale = cannon_scale,
                 shift = util.add_shift(util.mul_shift(util.by_pixel(54+58, -1+46), cannon_scale), cannon_shadow_shift),
                 stripes = create_stripes{
@@ -261,8 +262,7 @@ data:extend{
                     "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-12.png",
                     "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-13.png",
                     "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-14.png",
-                    "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-15.png",
-                    "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-16.png"
+                    "__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow-15.png"
                 }
             },
         }},
