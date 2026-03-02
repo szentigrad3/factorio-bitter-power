@@ -56,10 +56,6 @@ data:extend({
               {
                 filename = "__base__/sound/centrifuge-2.ogg",
                 volume = 0.3
-              },
-              {
-                filename = "__base__/sound/centrifuge-6.ogg",
-                volume = 0.3
               }
             }
           },
