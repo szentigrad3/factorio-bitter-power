@@ -67,6 +67,7 @@ data:extend {
         },
         subgroup = "bp-peacekeeping",
         order = "d[cage-cannon-projectile]",
+        ammo_category = "bp-cage-projectile",
         magazine_size = 1,
         stack_size = 5,
         reload_time = cooldown,
