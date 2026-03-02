@@ -265,71 +265,45 @@ data:extend{
                 }
             },
         }},
-        base_picture = { layers = {
-            {
-                filename = "__base__/graphics/entity/gun-turret/gun-turret-base.png",
-                priority = "high",
-                width = 76,
-                height = 60,
-                axially_symmetrical = false,
-                direction_count = 1,
-                frame_count = 1,
-                shift = util.by_pixel(1, -1),
-                hr_version = {
-                    filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base.png",
-                    priority = "high",
-                    width = 150,
-                    height = 118,
-                    axially_symmetrical = false,
-                    direction_count = 1,
-                    frame_count = 1,
-                    shift = util.by_pixel(0.5, -1),
-                    scale = 0.5
-                }
-            },
-            {
-                filename = "__biter-power__/graphics/cage-cannon/base-shadow.png",
-                width = 126,
-                height = 62,
-                shift = util.by_pixel(19, 2),
-                axially_symmetrical = false,
-                draw_as_shadow = true,
-                hr_version = {
-                    filename = "__biter-power__/graphics/cage-cannon/hr-base-shadow.png",
-                    width = 250,
-                    height = 124,
-                    shift = util.by_pixel(19, 2.5),
-                    axially_symmetrical = false,
-                    draw_as_shadow = true,
-                    scale = 0.5
-                }
-            },
-            {
-                filename = "__base__/graphics/entity/gun-turret/gun-turret-base-mask.png",
-                flags = { "mask", "low-object" },
-                line_length = 1,
-                width = 62,
-                height = 52,
-                axially_symmetrical = false,
-                direction_count = 1,
-                frame_count = 1,
-                shift = util.by_pixel(0, -4),
-                tint = {107, 102, 80, 128},
-                hr_version = {
-                    filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base-mask.png",
-                    flags = { "mask", "low-object" },
-                    line_length = 1,
-                    width = 122,
-                    height = 102,
-                    axially_symmetrical = false,
-                    direction_count = 1,
-                    frame_count = 1,
-                    shift = util.by_pixel(0, -4.5),
-                    tint = {107, 102, 80, 128},
-                    scale = 0.5
-                }
+        graphics_set = {
+            base_visualisation = {
+                animation = { layers = {
+                    {
+                        filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base.png",
+                        priority = "high",
+                        width = 150,
+                        height = 118,
+                        axially_symmetrical = false,
+                        direction_count = 1,
+                        frame_count = 1,
+                        shift = util.by_pixel(0.5, -1),
+                        scale = 0.5
+                    },
+                    {
+                        filename = "__biter-power__/graphics/cage-cannon/hr-base-shadow.png",
+                        width = 250,
+                        height = 124,
+                        shift = util.by_pixel(19, 2.5),
+                        axially_symmetrical = false,
+                        draw_as_shadow = true,
+                        scale = 0.5
+                    },
+                    {
+                        filename = "__base__/graphics/entity/gun-turret/hr-gun-turret-base-mask.png",
+                        flags = { "mask", "low-object" },
+                        line_length = 1,
+                        width = 122,
+                        height = 102,
+                        axially_symmetrical = false,
+                        direction_count = 1,
+                        frame_count = 1,
+                        shift = util.by_pixel(0, -4.5),
+                        tint = {107, 102, 80, 128},
+                        scale = 0.5
+                    }
+                }}
             }
-        }},
+        },
         vehicle_impact_sound = sounds.generic_impact,
 
         attack_parameters = {
