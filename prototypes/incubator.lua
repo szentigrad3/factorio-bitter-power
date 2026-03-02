@@ -192,11 +192,13 @@ for biter_name, biter_config in pairs(config.biter.types) do
         ingredients = util.table.deepcopy(config.incubator.ingredients),
         results = {
             {
+                type = "item",
                 name = "bp-caged-"..biter_name,
                 probability = config.incubator.biter_birth_probability / biter_config.density_modifier,
                 amount = 1,
             },
             {
+                type = "item",
                 name = "bp-cage",
                 probability = 1 - (config.incubator.biter_birth_probability / biter_config.density_modifier),
                 amount = 1,
