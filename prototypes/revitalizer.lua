@@ -35,13 +35,13 @@ local idle_animation = {
             } 
         },
         {
-            filename = "__biter-power__/graphics/revitalizer/center-back.png",
+            filename = "__biter-power-continued__/graphics/revitalizer/center-back.png",
             width = 194,
             height = 173,
             scale = 0.25,
             repeat_count = #frame_sequence,
             hr_version = {
-                filename = "__biter-power__/graphics/revitalizer/center-back.png",
+                filename = "__biter-power-continued__/graphics/revitalizer/center-back.png",
                 width = 194,
                 height = 173,
                 scale = 0.5,
@@ -129,13 +129,13 @@ table.insert(animation.layers, {
 -- Now add the front to both
 for _, property in pairs{idle_animation, animation} do
     table.insert(property.layers, {
-        filename = "__biter-power__/graphics/revitalizer/center-front.png",
+        filename = "__biter-power-continued__/graphics/revitalizer/center-front.png",
         width = 194,
         height = 173,
         scale = 0.5,
         repeat_count = #frame_sequence,
         hr_version = {
-            filename = "__biter-power__/graphics/revitalizer/center-front.png",
+            filename = "__biter-power-continued__/graphics/revitalizer/center-front.png",
             width = 194,
             height = 173,
             scale = 0.5,
@@ -153,7 +153,7 @@ data:extend({
     {
         type = "item",
         name = "bp-revitalizer",
-        icon = "__biter-power__/graphics/revitalizer/icon.png",
+        icon = "__biter-power-continued__/graphics/revitalizer/icon.png",
         icon_size = 64, icon_mipmaps = 4,
         subgroup = "bp-biter-machines",
         order = "d[biter-revitalizer]",
@@ -163,7 +163,7 @@ data:extend({
     {
         type = "recipe",
         name = "bp-revitalizer",
-        icon = "__biter-power__/graphics/revitalizer/icon.png",
+        icon = "__biter-power-continued__/graphics/revitalizer/icon.png",
         icon_size = 64, icon_mipmaps = 4,
         ingredients = {
             {type="item", name="steel-plate", amount=30},
@@ -180,7 +180,7 @@ data:extend({
             {"entity-description.bp-revitalizer"},
             {"bp-text.escape-modifier", tostring(config.escapes.escapable_machine["bp-revitalizer"])},
         },
-        icon = "__biter-power__/graphics/revitalizer/icon.png",
+        icon = "__biter-power-continued__/graphics/revitalizer/icon.png",
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "placeable-player", "player-creation", "hide-alt-info"},
         minable = {mining_time = 0.2, result = "bp-revitalizer"},
@@ -275,7 +275,7 @@ for biter_name, biter_config in pairs(config.biter.types) do
 
     local icons = util.copy(biter_config.icons)
     table.insert(icons, 1, {
-        icon = "__biter-power__/graphics/revitalizer/icon.png",
+        icon = "__biter-power-continued__/graphics/revitalizer/icon.png",
         icon_size = 64, icon_mipmaps = 4,
     })
 

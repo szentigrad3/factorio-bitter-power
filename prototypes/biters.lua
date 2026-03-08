@@ -7,7 +7,7 @@ data:extend({
     {
         type = "item",
         name = "bp-biter-egg",
-        icon = "__biter-power__/graphics/incubator/biter-egg.png",
+        icon = "__biter-power-continued__/graphics/incubator/biter-egg.png",
         icon_size = 64, icon_mipmaps = 4,
         subgroup = "bp-peacekeeping",
         order = "a[biter-egg]",
@@ -34,13 +34,13 @@ for biter_name, biter_config in pairs(config.biter.types) do
     -- Create the caged and tired caged items
     local caged_icons = util.copy(biter_config.icons)
     table.insert(caged_icons, 1, {
-        icon = "__biter-power__/graphics/cage/icon.png",
+        icon = "__biter-power-continued__/graphics/cage/icon.png",
         icon_size = 64,
     })
 
     local tired_caged_icons = util.copy(biter_config.icons)
     table.insert(tired_caged_icons, 1, {
-        icon = "__biter-power__/graphics/cage/icon.png",
+        icon = "__biter-power-continued__/graphics/cage/icon.png",
         icon_size = 64,
     })
     table.insert(tired_caged_icons, 

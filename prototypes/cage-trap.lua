@@ -5,7 +5,7 @@ data:extend{
     {
         type = "item",
         name = "bp-cage-trap",
-        icon = "__biter-power__/graphics/cage-trap/icon.png",
+        icon = "__biter-power-continued__/graphics/cage-trap/icon.png",
         icon_size = 64,
         subgroup = "bp-peacekeeping",
         order = "c[cage-trap]",
@@ -28,7 +28,7 @@ data:extend{
     {
         type = "land-mine",
         name = "bp-cage-trap",
-        icon = "__biter-power__/graphics/cage-trap/icon.png",
+        icon = "__biter-power-continued__/graphics/cage-trap/icon.png",
         icon_size = 64,
         flags = {
             "placeable-player",
@@ -49,21 +49,21 @@ data:extend{
         open_sound = sounds.machine_open,
         close_sound = sounds.machine_close,
         picture_safe = {
-            filename = "__biter-power__/graphics/cage-trap/hr-cage-trap.png",
+            filename = "__biter-power-continued__/graphics/cage-trap/hr-cage-trap.png",
             priority = "medium",
             width = 174,
             height = 161,
             scale = 0.5
         },
         picture_set = {
-            filename = "__biter-power__/graphics/cage-trap/hr-cage-trap.png",
+            filename = "__biter-power-continued__/graphics/cage-trap/hr-cage-trap.png",
             priority = "medium",
             width = 174,
             height = 161,
             scale = 0.5
         },
         picture_set_enemy = {
-            filename = "__biter-power__/graphics/cage-trap/hr-cage-trap.png",
+            filename = "__biter-power-continued__/graphics/cage-trap/hr-cage-trap.png",
             priority = "medium",
             width = 174,
             height = 161,

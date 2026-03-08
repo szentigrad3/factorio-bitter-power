@@ -10,7 +10,7 @@ reinforced_generator.localised_description = {"",
   {"entity-description.bp-generator"},
   {"bp-text.escape-modifier", tostring(config.escapes.escapable_machine["bp-generator-reinforced"])},
 }
-reinforced_generator.icon = "__biter-power__/graphics/generator/reinforced-icon.png"
+reinforced_generator.icon = "__biter-power-continued__/graphics/generator/reinforced-icon.png"
 reinforced_generator.max_power_output = util.format_number(config.generator.power_output * config.generator.reinforced_multiplyer, true).."W"
 reinforced_generator.minable.result = "bp-generator-reinforced"
 reinforced_generator.placeable_by.item = "bp-generator-reinforced"
@@ -20,9 +20,9 @@ reinforced_generator.burner.fuel_categories = {"bp-biter-power", "bp-biter-power
 
 -- Update graphics
 local mask_layer = util.table.deepcopy(reinforced_generator.animation.layers[1])
-mask_layer.filename = "__biter-power__/graphics/generator/generator-reinforced-mask.png"
+mask_layer.filename = "__biter-power-continued__/graphics/generator/generator-reinforced-mask.png"
 if mask_layer.hr_version then
-  mask_layer.hr_version.filename = "__biter-power__/graphics/generator/generator-reinforced-mask.png"
+  mask_layer.hr_version.filename = "__biter-power-continued__/graphics/generator/generator-reinforced-mask.png"
 end
 local replace_files = {
   ["__base__/graphics/entity/transport-belt/transport-belt.png"] = 
@@ -60,7 +60,7 @@ data:extend{
   {
     type = "item",
     name = "bp-generator-reinforced",
-    icon = "__biter-power__/graphics/generator/reinforced-icon.png",
+    icon = "__biter-power-continued__/graphics/generator/reinforced-icon.png",
     icon_size = 64,
     subgroup = "bp-biter-machines",
     order = "c[generator]",

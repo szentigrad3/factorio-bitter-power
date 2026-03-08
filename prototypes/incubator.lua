@@ -12,7 +12,7 @@ data:extend({
     {
         type = "item",
         name = "bp-incubator",
-        icon = "__biter-power__/graphics/incubator/icon.png",
+        icon = "__biter-power-continued__/graphics/incubator/icon.png",
         icon_size = 64,
         subgroup = "bp-biter-machines",
         order = "b[biter-incubator]",
@@ -22,7 +22,7 @@ data:extend({
     {
         type = "recipe",
         name = "bp-incubator",
-        icon = "__biter-power__/graphics/incubator/icon.png",
+        icon = "__biter-power-continued__/graphics/incubator/icon.png",
         icon_size = 64,
         ingredients = {
             {type="item", name="stone-brick", amount=6},
@@ -34,7 +34,7 @@ data:extend({
     {
         type = "assembling-machine",
         name = "bp-incubator",
-        icon = "__biter-power__/graphics/incubator/icon.png",
+        icon = "__biter-power-continued__/graphics/incubator/icon.png",
         icon_size = 64,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
         minable = {mining_time = 0.2, result = "bp-incubator"},
@@ -77,13 +77,13 @@ data:extend({
         always_draw_idle_animation = true,
         idle_animation = {layers = {
             {
-                filename = "__biter-power__/graphics/incubator/center.png",
+                filename = "__biter-power-continued__/graphics/incubator/center.png",
                 width = 194,
                 height = 223,
                 scale = 0.5 * 2 / 3,
                 shift = {0, -0.2},
                 hr_version = {
-                    filename = "__biter-power__/graphics/incubator/center.png",
+                    filename = "__biter-power-continued__/graphics/incubator/center.png",
                     width = 194,
                     height = 223,
                     scale = 0.5 * 2 / 3,
@@ -91,14 +91,14 @@ data:extend({
                 }
             },
             {
-                filename = "__biter-power__/graphics/incubator/center-shadow.png",
+                filename = "__biter-power-continued__/graphics/incubator/center-shadow.png",
                 width = 294,
                 height = 188,
                 draw_as_shadow = true,
                 scale = 0.5 * 2 / 3,
                 shift = {0.5, 0.2},
                 hr_version = {
-                    filename = "__biter-power__/graphics/incubator/center-shadow.png",
+                    filename = "__biter-power-continued__/graphics/incubator/center-shadow.png",
                     width = 294,
                     height = 188,
                     draw_as_shadow = true,
@@ -111,14 +111,14 @@ data:extend({
             {
                 apply_recipe_tint = "primary",
                 animation = {
-                    filename = "__biter-power__/graphics/incubator/center-light-bottom.png",
+                    filename = "__biter-power-continued__/graphics/incubator/center-light-bottom.png",
                     draw_as_glow = true,
                     width = 194,
                     height = 223,
                     scale = 0.5 * 2 / 3,
                     shift = {0, -0.2},
                     hr_version = {
-                        filename = "__biter-power__/graphics/incubator/center-light-bottom.png",
+                        filename = "__biter-power-continued__/graphics/incubator/center-light-bottom.png",
                         draw_as_glow = true,
                         width = 194,
                         height = 223,
@@ -129,7 +129,7 @@ data:extend({
             },
             {
                 animation = {
-                    filename = "__biter-power__/graphics/incubator/center-light-top.png",
+                    filename = "__biter-power-continued__/graphics/incubator/center-light-top.png",
                     blend_mode = "additive",
                     draw_as_glow = true,
                     width = 194,
@@ -138,7 +138,7 @@ data:extend({
                     shift = {0, -0.2},
                     hr_version =
                     {
-                        filename = "__biter-power__/graphics/incubator/center-light-top.png",
+                        filename = "__biter-power-continued__/graphics/incubator/center-light-top.png",
                         blend_mode = "additive",
                         draw_as_glow = true,
                         width = 194,
@@ -174,7 +174,7 @@ for biter_name, biter_config in pairs(config.biter.types) do
 
     local icons = util.copy(biter_config.icons)
     table.insert(icons, 1, {
-        icon = "__biter-power__/graphics/incubator/biter-egg.png",
+        icon = "__biter-power-continued__/graphics/incubator/biter-egg.png",
         icon_size = 64, icon_mipmaps = 4,
     })
 

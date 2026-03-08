@@ -36,14 +36,14 @@ local function belt_sprite_at(shift, section)
 local idle_animation = {
   layers = {
     {
-      filename = "__biter-power__/graphics/generator/generator-back.png",
+      filename = "__biter-power-continued__/graphics/generator/generator-back.png",
       width = 195,
       height = 230,        
       scale = 0.5 * 4 / 3,
       shift = {0, -0.3},
       repeat_count = 16,
       hr_version = {
-        filename = "__biter-power__/graphics/generator/generator-back.png",
+        filename = "__biter-power-continued__/graphics/generator/generator-back.png",
         width = 195,
         height = 230,        
         shift = {0, -0.3},
@@ -64,7 +64,7 @@ local animation = table.deepcopy(idle_animation)
 -- Now add the outer cage edge to both
 for _, property in pairs{idle_animation, animation} do
   table.insert(property.layers, {
-    filename = "__biter-power__/graphics/generator/hr-motor.png",
+    filename = "__biter-power-continued__/graphics/generator/hr-motor.png",
     width = 114,
     height = 318,
     frame_count = 16,
@@ -72,7 +72,7 @@ for _, property in pairs{idle_animation, animation} do
     scale = 0.5 * 0.8,
     shift = {1.5, -0.3},
     hr_version = {
-      filename = "__biter-power__/graphics/generator/hr-motor.png",
+      filename = "__biter-power-continued__/graphics/generator/hr-motor.png",
       width = 114,
       height = 318,
       frame_count = 16,
@@ -82,7 +82,7 @@ for _, property in pairs{idle_animation, animation} do
     }
   })
   table.insert(property.layers, {
-    filename = "__biter-power__/graphics/generator/hr-generator-shadow.png",
+    filename = "__biter-power-continued__/graphics/generator/hr-generator-shadow.png",
     draw_as_shadow = true,
     width = 274,
     height = 196,
@@ -90,7 +90,7 @@ for _, property in pairs{idle_animation, animation} do
     shift = {0.8, 0},
     repeat_count = 16,
     hr_version = {
-      filename = "__biter-power__/graphics/generator/hr-generator-shadow.png",
+      filename = "__biter-power-continued__/graphics/generator/hr-generator-shadow.png",
       draw_as_shadow = true,
       width = 274,
       height = 196,
@@ -100,14 +100,14 @@ for _, property in pairs{idle_animation, animation} do
     }
   })
   table.insert(property.layers, {
-    filename = "__biter-power__/graphics/generator/generator-front.png",
+    filename = "__biter-power-continued__/graphics/generator/generator-front.png",
     width = 195,
     height = 230,
     scale = 0.5 * 4 / 3,
     shift = {0, -0.3},
     repeat_count = 16,
     hr_version = {
-      filename = "__biter-power__/graphics/generator/generator-front.png",
+      filename = "__biter-power-continued__/graphics/generator/generator-front.png",
       width = 195,
       height = 230,
       scale = 0.5 * 4 / 3,
@@ -129,7 +129,7 @@ data:extend({
   {
     type = "item",
     name = "bp-generator",
-    icon = "__biter-power__/graphics/generator/icon.png",
+    icon = "__biter-power-continued__/graphics/generator/icon.png",
     icon_size = 64,
     subgroup = "bp-biter-machines",
     order = "c[generator]",
@@ -155,7 +155,7 @@ data:extend({
       {"entity-description.bp-generator"},
       {"bp-text.escape-modifier", tostring(config.escapes.escapable_machine["bp-generator"])},
     },
-    icon = "__biter-power__/graphics/generator/icon.png",
+    icon = "__biter-power-continued__/graphics/generator/icon.png",
     icon_size = 64,
     flags = {"placeable-neutral","player-creation"},
     max_health = 400,
@@ -195,14 +195,14 @@ data:extend({
     idle_animation = idle_animation,
     animation = animation,
     integration_patch = {
-        filename = "__biter-power__/graphics/generator/hr-integration-patch.png",
+        filename = "__biter-power-continued__/graphics/generator/hr-integration-patch.png",
         width = 220,
         height = 222,
         scale = 0.5 * 4 / 3,
         shift = util.by_pixel(0, 230/2 - 222/2 - 0.3*32),
         repeat_count = 16,
         hr_version = {
-          filename = "__biter-power__/graphics/generator/hr-integration-patch.png",
+          filename = "__biter-power-continued__/graphics/generator/hr-integration-patch.png",
           width = 220,
           height = 222,
           scale = 0.5 * 4 / 3,

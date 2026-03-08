@@ -4,7 +4,7 @@ local bp_tech = {
     type = "technology",
     name = "bp-biter-power",
     icon_size = 230,
-    icon = "__biter-power__/graphics/technology/bp-tech-1.png",
+    icon = "__biter-power-continued__/graphics/technology/bp-tech-1.png",
     effects = {
         { type = "unlock-recipe", recipe = "bp-cage" },
         { type = "unlock-recipe", recipe = "bp-cage-trap" },
@@ -30,7 +30,7 @@ local bp_tech_advanced = {
   type = "technology",
   name = "bp-biter-power-advanced",
   icon_size = 230,
-  icon = "__biter-power__/graphics/technology/bp-tech-2.png",
+  icon = "__biter-power-continued__/graphics/technology/bp-tech-2.png",
   effects = {
     { type = "unlock-recipe", recipe = "bp-generator-reinforced" },
     { type = "unlock-recipe", recipe = "bp-cage-projectile" },
@@ -56,7 +56,7 @@ data:extend{
     type = "tool",
     name = "bp-capture",
     order = "z",
-    icon = "__biter-power__/graphics/cage-trap/icon.png",
+    icon = "__biter-power-continued__/graphics/cage-trap/icon.png",
     icon_size = 64,
     subgroup = "bp-peacekeeping",
     stack_size = 1,
@@ -72,7 +72,7 @@ local function generate_tech_tier(tier)
     name = "bp-biter-capture-tier-"..tier,
     icons = {
       {
-        icon = "__biter-power__/graphics/cage/icon.png",
+        icon = "__biter-power-continued__/graphics/cage/icon.png",
         icon_size = 64,
       },
     },

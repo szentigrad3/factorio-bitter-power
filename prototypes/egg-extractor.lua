@@ -8,7 +8,7 @@ data:extend({
     {
         type = "item",
         name = "bp-egg-extractor",
-        icon = "__biter-power__/graphics/egg-extractor/icon.png",
+        icon = "__biter-power-continued__/graphics/egg-extractor/icon.png",
         icon_size = 64,
         subgroup = "bp-biter-machines",
         order = "a[biter-egg-extractor]",
@@ -29,7 +29,7 @@ data:extend({
     {
         type = "mining-drill",
         name = "bp-egg-extractor",
-        icon = "__biter-power__/graphics/egg-extractor/icon.png",
+        icon = "__biter-power-continued__/graphics/egg-extractor/icon.png",
         icon_size = 64,
         flags = {"placeable-neutral", "player-creation"},
         minable = {mining_time = 0.3, result = "bp-egg-extractor"},
@@ -96,7 +96,7 @@ data:extend({
               draw_as_light = true,
               animation = { layers = {
                   {
-                      filename = "__biter-power__/graphics/egg-extractor/hr-center-glow.png",
+                      filename = "__biter-power-continued__/graphics/egg-extractor/hr-center-glow.png",
                       priority = "high",
                       blend_mode = "additive",
                       animation_speed = 0.5,
@@ -109,7 +109,7 @@ data:extend({
                       scale = 0.5 * 1.5,
                       shift = {0.03 + shift.x, -0.24 + shift.y},
                       hr_version = {
-                          filename = "__biter-power__/graphics/egg-extractor/hr-center-glow.png",
+                          filename = "__biter-power-continued__/graphics/egg-extractor/hr-center-glow.png",
                           priority = "high",
                           blend_mode = "additive",
                           animation_speed = 0.5,
@@ -128,7 +128,7 @@ data:extend({
           idle_animation = {
               layers = {
                   {
-                    filename = "__biter-power__/graphics/egg-extractor/hr-hole-front.png",
+                    filename = "__biter-power-continued__/graphics/egg-extractor/hr-hole-front.png",
                     priority = "extra-high",
                     animation_speed = 0.5,
                     width = 322,
@@ -137,7 +137,7 @@ data:extend({
                     repeat_count = 64,
                     shift = {0.25, -0.5},
                     hr_version = {
-                        filename = "__biter-power__/graphics/egg-extractor/hr-hole-front.png",
+                        filename = "__biter-power-continued__/graphics/egg-extractor/hr-hole-front.png",
                         priority = "extra-high",
                         animation_speed = 0.5,
                         width = 322,
@@ -148,7 +148,7 @@ data:extend({
                     }
                   },
                   {
-                      filename = "__biter-power__/graphics/egg-extractor/hr-center.png",
+                      filename = "__biter-power-continued__/graphics/egg-extractor/hr-center.png",
                       priority = "high",
                       animation_speed = 0.5,
                       line_length = 8,
@@ -162,7 +162,7 @@ data:extend({
                       scale = 0.5 * 1.5,
                       shift = {-0.1 + shift.x, 0 + shift.y},
                       hr_version = {
-                        filename = "__biter-power__/graphics/egg-extractor/hr-center.png",
+                        filename = "__biter-power-continued__/graphics/egg-extractor/hr-center.png",
                         priority = "high",
                         line_length = 8,
                         animation_speed = 0.5,
@@ -174,7 +174,7 @@ data:extend({
                       }
                   },
                   {
-                      filename = "__biter-power__/graphics/egg-extractor/hr-center-shadow.png",
+                      filename = "__biter-power-continued__/graphics/egg-extractor/hr-center-shadow.png",
                       draw_as_shadow = true,
                       priority = "high",
                       line_length = 8,
@@ -188,7 +188,7 @@ data:extend({
                       scale = 0.5 * 1.4,
                       shift = {1.5 + shift.x, 0 + shift.y},
                       hr_version = {
-                        filename = "__biter-power__/graphics/egg-extractor/hr-center-shadow.png",
+                        filename = "__biter-power-continued__/graphics/egg-extractor/hr-center-shadow.png",
                         draw_as_shadow = true,
                         priority = "high",
                         line_length = 8,

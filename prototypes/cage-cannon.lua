@@ -11,7 +11,7 @@ data:extend {
     {
         type = "item",
         name = "bp-cage-cannon",
-        icon = "__biter-power__/graphics/cage-cannon/icon.png",
+        icon = "__biter-power-continued__/graphics/cage-cannon/icon.png",
         icon_size = 64,
         subgroup = "bp-peacekeeping",
         order = "e[cage-cannon]",
@@ -56,7 +56,7 @@ data:extend {
         name = "bp-cage-projectile",
         icons = {
             {
-                icon = "__biter-power__/graphics/cage/icon.png",
+                icon = "__biter-power-continued__/graphics/cage/icon.png",
                 icon_size = 64,
             },
             {
@@ -129,7 +129,7 @@ data:extend {
             }
         },
         animation = {
-            filename = "__biter-power__/graphics/cage/icon.png",
+            filename = "__biter-power-continued__/graphics/cage/icon.png",
             draw_as_glow = true,
             frame_count = 1,
             line_length = 1,
@@ -140,7 +140,7 @@ data:extend {
             priority = "high"
         },
         shadow =  {
-            filename = "__biter-power__/graphics/cage/icon.png",
+            filename = "__biter-power-continued__/graphics/cage/icon.png",
             draw_as_shadow = true,
             frame_count = 1,
             line_length = 1,
@@ -269,7 +269,7 @@ data:extend{
                         scale = 0.5
                     },
                     {
-                        filename = "__biter-power__/graphics/cage-cannon/hr-base-shadow.png",
+                        filename = "__biter-power-continued__/graphics/cage-cannon/hr-base-shadow.png",
                         width = 250,
                         height = 124,
                         shift = util.by_pixel(19, 2.5),

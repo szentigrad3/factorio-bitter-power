@@ -13,7 +13,7 @@ data:extend{
         name = "biter-power-husbandry",
         order = "p",
         order_in_recipe = "0",
-        icon = "__biter-power__/graphics/husbundry-item-group.png",
+        icon = "__biter-power-continued__/graphics/husbundry-item-group.png",
         icon_size = 128,
     },
     {
