@@ -16,7 +16,7 @@ local function attempt_trapping_biter(event)
     local caged_name = "bp-caged-"..biter.name
     local force = trap.force ---@cast force LuaForce
     biter.surface.spill_item_stack(biter.position, {name=caged_name}, true, force)
-    trap.force.get_item_production_statistics().on_flow(caged_name, 1)
+    trap.force.get_item_production_statistics(trap.surface).on_flow(caged_name, 1)
     technology.attemp_tiered_technology_unlock(force.technologies["bp-biter-capture-tier-"..biter_config.tier], biter.name, true)
     biter.destroy{raise_destroy = true}
 end
