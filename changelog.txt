@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 9.3.2026
+  Bugfixes:
+    - Fix `LuaForce.get_item_production_statistics` missing surface argument in technology.lua, trapping.lua, escapables.lua and migration 0.3.0 (Factorio 2.0 API).
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 9.3.2026
   Bugfixes:
