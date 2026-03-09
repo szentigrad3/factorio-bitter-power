@@ -69,8 +69,10 @@ for spawner_name, spawner in pairs(data.raw["unit-spawner"]) do
   if not spawner.result_units then goto continue end
   local spawns_catchable_unit = false
   for _, definition in pairs(spawner.result_units) do
-    local unit = definition[unit] or definition[1]
-    if config.biter.types[unit] then 
+    -- Factorio 2.0 uses named fields {unit=..., spawn_points=...};
+    -- Factorio 1.x used positional arrays where [1] was the unit name.
+    local unit_name = definition.unit or definition[1]
+    if config.biter.types[unit_name] then 
       spawns_catchable_unit = true
     end
   end

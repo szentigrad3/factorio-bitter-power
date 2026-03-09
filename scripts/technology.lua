@@ -48,15 +48,12 @@ function technology.attemp_tiered_technology_unlock(tech, biter_name, force_unlo
         for _, biter_name in pairs(technology.biters_in_tier[tech.level]) do
             -- This check isn't perfect, but will only fail if player cheated
             -- TODO could change this to a custom stored value in global
-            for _, surface in pairs(game.surfaces) do
-                if tech.force.get_item_production_statistics(surface).get_input_count("bp-caged-"..biter_name) > 0 then
-                    biter_already_captured = true
-                    goto continue
-                end
+            if tech.force.get_item_production_statistics().get_input_count("bp-caged-"..biter_name) > 0 then
+                biter_already_captured = true
+                break
             end
         end
 
-        ::continue::
         if not biter_already_captured then return end
     end
 
