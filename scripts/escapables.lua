@@ -301,7 +301,7 @@ local function on_constructed(event)
             -- Player released a caged biter. Captured biters aren't wild
             -- But first "consume" the item for the player's force, before
             -- making the biter wild again.
-            entity.force.item_production_statistics.on_flow(stack.name, -1)
+            entity.force.get_item_production_statistics(entity.surface).on_flow(stack.name, -1)
             entity.force = "enemy"
             return
         end
