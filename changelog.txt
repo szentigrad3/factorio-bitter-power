@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 9.3.2026
+  Bugfixes:
+    - Fix `LuaSurface.spill_item_stack` call in trapping.lua to use the new table-based API (Factorio 2.0).
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 9.3.2026
   Bugfixes:
