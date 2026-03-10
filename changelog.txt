@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.7
+Date: 10.3.2026
+  Bugfixes:
+    - Fix bp-revitalizer load error: changed entity type from furnace to assembling-machine, as
+      Factorio 2.0 does not allow furnace entities with source_inventory_size > 1.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.6
 Date: 10.3.2026
   Features:
