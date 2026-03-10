@@ -14,7 +14,8 @@
         "? bobenemies",
         "? Arachnids_enemy",
         "? ArachnidsFaction",
-        "? Rampant"
+        "? Rampant",
+        "? neurotoxic-gas-installation"
     ],
     "package":{
         "ignore":[ "*.md", "*.zip", "mod-page/*" ]
