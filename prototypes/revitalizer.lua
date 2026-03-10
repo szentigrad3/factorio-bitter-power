@@ -189,7 +189,7 @@ data:extend({
         corpse = "lab-remnants",
         dying_explosion = "lab-explosion",
         result_inventory_size = 1,
-        source_inventory_size = 1, 
+        source_inventory_size = 2, -- 2 slots: tired biter + optional raw fish
         crafting_categories = revitalizer_crafting_categories,
         resistances = {
             {
@@ -297,4 +297,27 @@ for biter_name, biter_config in pairs(config.biter.types) do
     }
     recipe.results[1].name = "bp-caged-"..biter_name
     data:extend{ recipe }
+
+    -- Fish-fed variant: feeding a raw fish to the tired biter halves the recovery time
+    local fish_recipe = {
+        type = "recipe",
+        name = "bp-revitalization-fish-"..biter_name,
+        localised_name = {"bp-text.revitalization-fish", unit.localised_name or {"entity-name."..unit.name}},
+        icons = icons,
+        hide_from_player_crafting = true,
+        show_amount_in_title = false,
+        always_show_products = true,
+        subgroup = "revitalization-tier-"..biter_config.tier,
+        category =  "revitalization-tier-"..biter_config.tier,
+        order = "c[revitilization]-["..data.raw.unit[biter_name].order:sub(-1).."]-["..biter_name.."]-[fish]",
+        ingredients = {
+            {type="item", name="bp-tired-caged-"..biter_name, amount=1},
+            {type="item", name="raw-fish", amount=1},
+        },
+        energy_required = config.revitalization.time * biter_config.density_modifier * config.revitalization.fish_time_modifier,
+        results = util.table.deepcopy(config.revitalization.results(biter_config.tier)),
+        enabled = false, -- Now needs to be unlocked by tech
+    }
+    fish_recipe.results[1].name = "bp-caged-"..biter_name
+    data:extend{ fish_recipe }
 end

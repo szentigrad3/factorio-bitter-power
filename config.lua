@@ -37,6 +37,7 @@ config.revitalization.success_rate = 0.9 -- This is a base rate. Each additional
 config.revitalization.egg_drop_rate = 0 -- Disable it for now, it's too complicated.
 config.revitalization.time = config.biter.burn_time * config.revitalization.number_per_generator
 config.revitalization.emissions_per_minute = 4  -- Just like assembler 1
+config.revitalization.fish_time_modifier = 0.5  -- Feeding raw fish halves the recovery time
 config.revitalization.results = function (tier)
     local probability = (tier - 1) * 0.01 + config.revitalization.success_rate
     if probability > 0.99 then error("Invalid probability: "..probability) end

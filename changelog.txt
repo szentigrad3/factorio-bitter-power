@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: 10.3.2026
+  Features:
+    - Added fish-fed revitalization: inserting a raw fish alongside a Tired Caged Biter into the
+      Biter Revitalizer halves the recovery time, making the power cycle more efficient.
+    - The Biter Revitalizer now has two input slots to support the optional fish ingredient.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: 9.3.2026
   Bugfixes:

@@ -91,6 +91,7 @@ local function generate_tech_tier(tier)
     if biter_config.tier == tier then
       table.insert(tech.effects, {type = "unlock-recipe", recipe = "bp-incubate-egg-"..biter_name})
       table.insert(tech.effects, {type = "unlock-recipe", recipe = "bp-revitalization-"..biter_name})
+      table.insert(tech.effects, {type = "unlock-recipe", recipe = "bp-revitalization-fish-"..biter_name})
 
       -- Only add the icon if we haven't already handled this tier.
       if #tech.icons == 1 then
