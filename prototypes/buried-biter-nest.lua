@@ -66,42 +66,42 @@ for spawner_name, spawner in pairs(data.raw["unit-spawner"]) do
 
   -- First determine if this spawner can spawn a biter that we can catch
   -- If not then ignore this spawner
-  if not spawner.result_units then goto continue end
-  local spawns_catchable_unit = false
-  for _, definition in pairs(spawner.result_units) do
-    -- Factorio 2.0 uses named fields {unit=..., spawn_points=...};
-    -- Factorio 1.x used positional arrays where [1] was the unit name.
-    local unit_name = definition.unit or definition[1]
-    if config.biter.types[unit_name] then 
-      spawns_catchable_unit = true
+  if spawner.result_units then
+    local spawns_catchable_unit = false
+    for _, definition in pairs(spawner.result_units) do
+      -- Factorio 2.0 uses named fields {unit=..., spawn_points=...};
+      -- Factorio 1.x used positional arrays where [1] was the unit name.
+      local unit_name = definition.unit or definition[1]
+      if config.biter.types[unit_name] then
+        spawns_catchable_unit = true
+        break
+      end
+    end
+    if spawns_catchable_unit then
+      -- Add trigger effect to spawners to have a chance
+      -- to create buried biter nest on death
+      spawner.dying_trigger_effect = spawner.dying_trigger_effect or {}
+      table.insert(spawner.dying_trigger_effect, {
+        type = "create-entity",
+        entity_name = "bp-buried-biter-nest",
+        probability = config.buried_nest.spawn_chance,
+
+        -- Need some way to clear the corpse later because
+        -- it doesn't exist when these triggers fire
+        -- Also don't know how to set the resource amount
+        -- here, so we will set it on the raised event
+        trigger_created_entity = true,
+      })
+      spawner.localised_description = {"bp-text.spawner-description", string.format("%.0f", config.buried_nest.spawn_chance*100)}
+
+      -- Also add a chance for some eggs to drop on any spawner kill
+      spawner.loot = spawner.spawner or {}
+      table.insert(spawner.loot, {
+        item = "bp-biter-egg",
+        -- Will on average drop 1 biter per spawner death
+        count_min = 0.5 * config.biter.egg_to_biter_ratio,
+        count_max = 1.5 * config.biter.egg_to_biter_ratio,
+      })
     end
   end
-  if not spawns_catchable_unit then goto continue end
-  
-  -- Add trigger effect to spawners to have a chance
-  -- to create buried biter nest on death
-  spawner.dying_trigger_effect = spawner.dying_trigger_effect or {}
-  table.insert(spawner.dying_trigger_effect, {
-    type = "create-entity",
-    entity_name = "bp-buried-biter-nest",
-    probability = config.buried_nest.spawn_chance,
-
-    -- Need some way to clear the corpse later because
-    -- it doesn't exist when these triggers fire
-    -- Also don't know how to set the resource amount
-    -- here, so we will set it on the raised event
-    trigger_created_entity = true,
-  })
-  spawner.localised_description = {"bp-text.spawner-description", string.format("%.0f", config.buried_nest.spawn_chance*100)}
-
-  -- Also add a chance for some eggs to drop on any spawner kill 
-  spawner.loot = spawner.spawner or {}
-  table.insert(spawner.loot, {
-    item = "bp-biter-egg", 
-    -- Will on average drop 1 biter per spawner death
-    count_min = 0.5 * config.biter.egg_to_biter_ratio,
-    count_max = 1.5 * config.biter.egg_to_biter_ratio,
-  })
-
-  ::continue::
 end

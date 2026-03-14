@@ -1,8 +1,13 @@
 local config = require("config")
 local nests = { }
 
+local function initialize_storage()
+    storage.nests_to_clean = storage.nests_to_clean or { }
+end
+
 ---@param event EventData.on_trigger_created_entity
 local function add_nest(event)
+    initialize_storage()
     local entity = event.entity
     if not entity or not entity.valid then return end
     if entity.name ~= "bp-buried-biter-nest" then return end
@@ -18,6 +23,7 @@ end
 
 nests.on_nth_tick = {
     [60] = function (event)
+        initialize_storage()
         -- Nests that die leaves their corpse on top of the buried biter nest
         -- so we clean it up ourselves after a while
         for _, nest in pairs(storage.nests_to_clean) do
@@ -36,8 +42,11 @@ nests.on_nth_tick = {
 }
 
 function nests.on_init(event)
-    ---@type LuaEntity[]
-    storage.nests_to_clean = { }
+    initialize_storage()
+end
+
+function nests.on_configuration_changed(event)
+    initialize_storage()
 end
 
 nests.events = {
