@@ -22,7 +22,7 @@ compatibility.add_remote_interface = function()
         ["milestones_preset_addons"] = function()
             return {
                 ["biter-power"] = {
-                    required_mods = {"biter-power"},
+                    required_mods = {"biter-power-continued"},
                     milestones = {
                         {type="group", name="Kills"},
                         {type="item",  name="bp-biter-egg", quantity=1, next="x100"},

@@ -26,6 +26,13 @@ local escapables = {
     fuel_to_biter_name = { },
 }
 
+local function initialize_storage()
+    storage.escapables = storage.escapables or { }
+    storage.iterate_escapables = nil
+    storage.ignore_build_destroy_events = nil
+    storage.ignore_build_destroy_events_for = nil
+end
+
 -- Cache some useful information while the game loads
 -------------------------------------------------------------------------
 local biter_configs = config.biter.types
@@ -195,7 +202,7 @@ local function update_escapable_derivates(entity, biters_in_machine)
     end
 
     -- We need to prevent destruction of this entity to release biters
-    storage.ignore_build_destroy_events_for = entity.unit_number
+    storage.ignore_build_destroy_events = entity.unit_number
     entity.destroy { raise_destroy = true }
     storage.ignore_build_destroy_events = nil
 
@@ -265,8 +272,8 @@ local function tick_escape_for_entity(data)
         entity.create_build_effect_smoke()
         local biters = escape_biters_from_entity(entity, biters_in_machine)
         for i = 1, #biters_in_machine do
-            if entity.valid then -- It might be destroyed in the loop. Only apply damage if it still exists                
-                entity.damage(entity.prototype.max_health * 0.2, "enemy", "physical")
+            if entity.valid then -- It might be destroyed in the loop. Only apply damage if it still exists
+                entity.damage(entity.max_health * 0.2, "enemy", "physical")
             end
         end
     end
@@ -385,11 +392,11 @@ escapables.events = {
 }
 
 function escapables.on_init(event)
-    ---@type table<uint, Escapable>
-    storage.escapables = { }
+    initialize_storage()
 end
 
 function escapables.on_configuration_changed(event)
+    initialize_storage()
     sanitize_escapables()
 end
 
