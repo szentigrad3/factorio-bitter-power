@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: 12.3.2026
+  Bugfixes:
+    - Fix escapable machine damage on escape to use `LuaEntity.max_health` instead of the missing runtime prototype field.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 12.3.2026
+  Bugfixes:
+    - Fix Factorio 2.0 save load failure caused by unsupported `goto` labels in trapping logic.
+    - Fix escapable machine derivative swaps by using the correct `storage.ignore_build_destroy_events` flag.
+    - Initialize runtime storage on configuration changes so the mod can be added or updated on existing saves safely.
+    - Fix Milestones integration metadata to require `biter-power-continued`.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.6.7
 Date: 10.3.2026
   Bugfixes:
