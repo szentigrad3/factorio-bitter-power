@@ -1,4 +1,5 @@
 local config = require("config")
+local recipe_sync = require("scripts.recipe-sync")
 
 local compatibility = {
     --- @type string[]
@@ -22,7 +23,7 @@ compatibility.add_remote_interface = function()
         ["milestones_preset_addons"] = function()
             return {
                 ["biter-power"] = {
-                    required_mods = {"biter-power"},
+                    required_mods = {"biter-power-continued"},
                     milestones = {
                         {type="group", name="Kills"},
                         {type="item",  name="bp-biter-egg", quantity=1, next="x100"},
@@ -52,11 +53,7 @@ compatibility.on_init = handle_picker_dollies
 
 function compatibility.on_configuration_changed(event)
     handle_picker_dollies()
-
-    -- Technically we don't have to do this every time, but it makes it easy.
-    for _, force in pairs(game.forces) do
-        force.reset_technology_effects()
-    end
+    recipe_sync.sync_all_forces()
 end
 
 return compatibility

@@ -1,6 +1,6 @@
-for index, force in pairs(game.forces) do
-    force.reset_technology_effects()
+local recipe_sync = require("scripts.recipe-sync")
 
+for index, force in pairs(game.forces) do
     -- If player had biter-power researched previously, and have 
     -- produced or captured caged biters, then unlock first tech
     if force.technologies["bp-biter-power"].researched then
@@ -15,5 +15,6 @@ for index, force in pairs(game.forces) do
             force.technologies["bp-biter-capture-tier-1"].researched = true
         end
     end
-end
 
+    recipe_sync.sync_force(force)
+end

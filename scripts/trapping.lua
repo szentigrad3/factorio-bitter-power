@@ -75,20 +75,18 @@ local function scan_cage_cannon(surface, cannon)
         type     = "unit",
     }
     for _, biter in pairs(biters) do
-        if not (biter.valid and biter.force.name ~= "enemy" and biter_configs[biter.name]) then goto continue end
-
-        -- Respect the cannon's minimum range
-        local dx = biter.position.x - cannon.position.x
-        local dy = biter.position.y - cannon.position.y
-        local dist = math.sqrt(dx*dx + dy*dy)
-        if dist < CAGE_CANNON_MIN_RANGE then goto continue end
-
-        -- Consume one ammo item and capture the biter
-        ammo_inventory.remove{name = "bp-cage-projectile", count = 1}
-        capture_biter(cannon, biter)
-        return
-
-        ::continue::
+        if biter.valid and biter.force.name ~= "enemy" and biter_configs[biter.name] then
+            -- Respect the cannon's minimum range
+            local dx = biter.position.x - cannon.position.x
+            local dy = biter.position.y - cannon.position.y
+            local dist = math.sqrt(dx*dx + dy*dy)
+            if dist >= CAGE_CANNON_MIN_RANGE then
+                -- Consume one ammo item and capture the biter
+                ammo_inventory.remove{name = "bp-cage-projectile", count = 1}
+                capture_biter(cannon, biter)
+                return
+            end
+        end
     end
 end
 
